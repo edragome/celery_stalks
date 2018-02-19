@@ -55,11 +55,11 @@ aws --endpoint-url http://alpinesqs:9324 sqs list-queues --region us-east-1
 
 ### get the queue attributes and number of items in queue
 ```
-aws sqs get-queue-attributes --endpoint-url http://alpinesqs:9324 --queue-url http://alpinesqs:9324/queue/addes --attribute-names All --region us-east-1
+aws sqs get-queue-attributes --endpoint-url http://alpinesqs:9324 --queue-url http://alpinesqs:9324/queue/requesting --attribute-names All --region us-east-1
 ```
 
 ### delete queue
 ```
-aws --endpoint-url http://alpinesqs:9324 sqs delete-queue --queue-url http://alpinesqs:9324/queue/celery --region us-east-1
+aws --endpoint-url http://alpinesqs:9324 sqs delete-queue --queue-url http://alpinesqs:9324/queue/requesting --region us-east-1
 ```
 
