@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  alpinesqs:
+    image: "roribio16/alpine-sqs"
+    ports:
+      - 9324
+  apps:
+    build: .
+    links:
+      - alpinesqs
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/code
+    environment:
+      - AWS_ACCESS_KEY_ID=ABC
+      - AWS_SECRET_ACCESS_KEY=123
+    command: celery -A tasks -Q requesting worker --loglevel=info
