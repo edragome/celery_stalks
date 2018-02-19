@@ -1,5 +1,5 @@
 # celery_stalks
-Exploring celery running against a dockerize version of sqs (alpine sqs) using docker containers
+Exploring celery running against a dockerized version of sqs (alpine sqs) using docker containers
 
 ## getting started
 
