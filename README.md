@@ -23,17 +23,11 @@ queuer.py: error: the following arguments are required: term
 ```
 
 ### celery worker
-The celery worker will start automatically from docker-compose with
-the `command` configuration in the yaml file.
-
-The command line can be removed from the yaml file and the
-line
+The celery worker will start automatically from docker-compose with the `command` configuration in the yaml file. The command line can be removed from the yaml file and the line
 ```
 /code# celery -A tasks -Q requesting worker --loglevel=info
 ```
-Can be run in another shell connection to the container
-
-With a populated queue the output will look something like
+Can be run in another shell connection to the container with a populated queue the output will look something like
 ```
 [2018-02-19 03:01:14,044: INFO/MainProcess] Starting new HTTP connection (1): alpinesqs
 [2018-02-19 03:01:14,086: INFO/MainProcess] Connected to sqs://ABC:**@alpinesqs:9324//
